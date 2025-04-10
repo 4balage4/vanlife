@@ -1,4 +1,25 @@
 :root {
   font-family: "inter";
-  /* width: 550px; */
+  max-width: 768px;
+  margin: 0;
+  padding: 0;
+
+
+  --menu-height: 115px;
+  --footer-height: 75px;
+  --content-height: calc(100vh - var(--menu-height) - var(--footer-height));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (min-width: 768px) {
+  :root {
+    max-width: 1920px;
+  }
+
+
 }
