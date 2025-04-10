@@ -1,0 +1,31 @@
+
+.menu-component {
+  background-color: #FFF7ED;
+  height: 111px;
+  /* width: 550px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+
+}
+
+.menu-component h1 {
+  color: #000000;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 900;
+
+}
+
+.menu-link-container {
+  width: 120px;
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-link-container .link-button {
+  color: #4D4D4D;
+  text-decoration: none;
+}
