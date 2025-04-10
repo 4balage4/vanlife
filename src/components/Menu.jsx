@@ -7,6 +7,7 @@ function Menu() {
         <div className="menu-link-container">
           <Link className="link-button" to="/home">Home</Link>
           <Link className="link-button" to='/about'>About</Link>
+          <Link className="link-button" to='/vans'>Vans</Link>
         </div>
     </div>
   )

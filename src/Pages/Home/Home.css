@@ -1,6 +1,6 @@
 
 .home-container {
-  background-image: url("../assets/images/image 53.png");
+  background-image: url("../../assets/images/image 53.png");
   background-size: cover;
   height: var(--content-height);
   display: flex;
@@ -19,10 +19,6 @@
 .home-header, .home-text {
   color: #fff;
   margin-bottom: 25px;
-}
-
-.home-text {
-
 }
 
 

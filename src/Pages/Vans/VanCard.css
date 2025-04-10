@@ -1,0 +1,76 @@
+
+
+.van-card {
+  width: 230px;
+  color: #161616;
+  margin: 15px 10px;
+  padding: 5px;
+
+  box-shadow: 10px black;
+}
+.van-card img {
+  width: 100%;
+  border-radius: 5px;
+
+}
+.van-card-text-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+.van-card-name-btn {
+
+}
+
+.van-card-name {
+  font-size: 20px;
+}
+.van-card-price {
+  font-size: 20px;
+}
+.van-card-price span {
+  font-size: 16px;
+}
+.van-card-button-simple {
+  width: 85px;
+  height: 34px;
+  color: #FFEAD0;
+  background-color: #E17654;
+}
+
+.van-card-button-luxury {
+  width: 85px;
+  height: 34px;
+  color: #FFEAD0;
+  background-color: #161616;
+}
+
+.van-card-button-rugged {
+  width: 85px;
+  height: 34px;
+  color: #FFEAD0;
+  background-color: #115E59;
+
+}
+
+
+
+@media (max-width: 520px) {
+  .van-card {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .van-card {
+    width: 230px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .van-card {
+    width: 350px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../components/Button";
-import camperImg from "../assets/images/image 54.png";
+import Button from "../../components/Button";
+import camperImg from "../../assets/images/image 54.png";
 
 function About() {
   return (

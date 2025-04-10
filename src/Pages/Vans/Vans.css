@@ -1,0 +1,91 @@
+
+.vans-container {
+  /* margin: 0 25px; */
+}
+
+.vans-header-container{
+  margin: 25px;
+}
+
+.button-container {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.filter {
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #FFEAD0;
+  color: #4D4D4D;
+}
+
+.clear-filter {
+  background-color: #FFF7ED;
+  text-decoration: underline;
+}
+
+.vans-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+@media (max-width: 520px) {
+  .vans-header-container{
+    margin: 10px;
+  }
+
+
+  .button-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .vans-list-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+
+  }
+}
+
+
+@media (min-width: 768px) {
+  .vans-container {
+    min-height: var(--content-height);
+    margin: 100px 0;
+  }
+
+.home-text-container {
+}
+
+.home-button {
+  width: 150px;
+}
+
+.vans-list-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+}
+@media (min-width: 1024px) {
+
+  .vans-container {
+    min-height: var(--content-height);
+    margin: 25px 0;
+  }
+
+  .van-list-container {
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* for bigger screens I want to have the same
+as I have in the about page.
+probably should make a variable.
+margin: 100px 25px;
+ */

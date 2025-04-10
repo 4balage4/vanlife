@@ -1,3 +1,8 @@
-@import "./About.css";
-@import "./Home.css";
+@import "./About/About.css";
+@import "./Home/Home.css";
 @import '../components/index.css';
+
+
+/* Vans  */
+@import "./Vans/Vans.css";
+@import "./Vans/VanCard.css";
