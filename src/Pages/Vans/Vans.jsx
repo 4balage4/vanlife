@@ -17,7 +17,7 @@ export default function Vans() {
   }, [])
 
 
-  console.log(vans)
+
   // console.log(vans)
 
   // id
@@ -48,9 +48,9 @@ export default function Vans() {
       </div>
       <div className='vans-list-container'>
         {vans && vans.map((van) => {
-          console.log(van)
           return (
             <VanCard
+              key={van.id}
               id={van.id}
               name={van.name}
               price={van.price}

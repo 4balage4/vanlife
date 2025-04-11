@@ -1,7 +1,7 @@
 
-const fetchVans = async () =>  {
+const fetchVan = async (id) =>  {
   try {
-    const response = await fetch('api/vans')
+    const response = await fetch(`/api/vans/${id}`)
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
@@ -13,4 +13,4 @@ const fetchVans = async () =>  {
   }
 }
 
-export default fetchVans
+export default fetchVan
