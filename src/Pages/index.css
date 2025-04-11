@@ -9,3 +9,8 @@
 
 /* VanDetail */
 @import './VanDetail/VanDetail.css';
+
+
+@import './Host/Dashboard.css';
+@import './Host/Income.css';
+@import './Host/Reviews.css';

@@ -1,6 +1,7 @@
 
 .vans-container {
   /* margin: 0 25px; */
+  min-height: var(--content-height);
 }
 
 .vans-header-container{
@@ -43,7 +44,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
+
   .vans-list-container {
     grid-template-columns: 1fr;
     margin: 0 auto;
