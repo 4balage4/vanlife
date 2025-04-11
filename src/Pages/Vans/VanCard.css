@@ -1,4 +1,8 @@
 
+.van-card-link{
+  text-decoration: none;
+  color: #161616;
+}
 
 .van-card {
   width: 230px;
@@ -10,6 +14,7 @@
 }
 .van-card img {
   width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 5px;
 
 }

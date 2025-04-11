@@ -1,0 +1,101 @@
+
+
+.van-detail-container{
+  margin: 0 auto;
+  padding: 0 10px 25px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  max-width: 500px;
+  min-height: 100vh;
+}
+
+.van-detail-container img{
+  object-fit: cover;
+  margin: 15px auto 0;
+  max-height: 350px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+
+.van-name{
+
+}
+
+
+.van-price{
+  font-size: 20px;
+}
+.van-price span {
+  font-size: 16px;
+
+}
+
+.van-description{
+
+}
+
+
+.van-btn{
+  width: 100%;
+  color: #fff;
+  background-color: #FF8C38;
+  max-width: 500px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+
+.van-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 34px;
+  color: #FFEAD0;
+  border-radius: 5px;
+}
+
+.van-type.rugged {
+  background-color: #115E59;
+}
+.van-type.simple {
+  background-color: #E17654;
+}
+.van-type.luxury {
+  background-color: #161616;
+}
+
+
+
+
+/* @media (max-width: 520px) {
+  .van-detail-container img {
+    width: 100%;
+  }
+} */
+
+
+@media (min-width: 768px) {
+  .van-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .van-detail-container img {
+    max-height: 450px;
+    width: 100%;;
+  }
+}
+
+@media (min-width: 1024px) {
+  .van-detail-container  {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .van-detail-container img {
+    max-height: 500px;
+    width: 100%;
+  }
+}
