@@ -1,0 +1,21 @@
+.host-menu {
+  background-color: #f3a03a;
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.host-menu-item {
+  font-size: 20px;
+  color: #4D4D4D;
+  text-decoration: none;
+  padding: 5px 5px;
+  margin: 0 5px;
+  text-transform: capitalize;
+}
+
+.host-menu-item:hover {
+  text-decoration: underline;
+
+}

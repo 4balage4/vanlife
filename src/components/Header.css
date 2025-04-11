@@ -1,7 +1,7 @@
 
 .menu-component {
   background-color: #FFF7ED;
-  height: 115px;
+  height: var(--menu-height);
   /* width: 550px; */
   display: flex;
   align-items: center;
@@ -29,4 +29,16 @@
   text-decoration: none;
   padding: 5px 10px;
   margin: 0 5px;
+  font-size: 20px;
+}
+
+.menu-link-container .link-button:hover {
+  text-decoration: underline;
+}
+
+
+.link-button.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
 }
