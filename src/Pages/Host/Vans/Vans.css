@@ -1,0 +1,56 @@
+.host-vans-container {
+  background-color: #FFF7ED;
+  min-height: var(--host-content-height);
+
+}
+
+.host-van-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.host-van-container {
+  display: flex;
+  height: 125px;
+  justify-items: start;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.host-van-text-container {
+  padding: 0 15px;
+
+}
+
+.host-van-text-container h3 {
+  font-size: 24px;
+  /* padding: ; */
+  margin: 10px 0;
+}
+
+.host-van-text-container p span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+@media (min-width: 768px) {
+  .host-vans-container {
+   max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .host-vans-container h2 {
+   text-align: center;
+  }
+  }
+
+
+  @media (min-width: 1024px) {
+    .host-vans-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+  }

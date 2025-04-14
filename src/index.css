@@ -1,2 +1,32 @@
 @import "../src//Pages/index.css";
 
+:root {
+  font-family: "inter";
+  /* max-width: 768px; */
+  margin: 0;
+  padding: 0;
+  background-color: #FFF7ED;
+
+  --menu-height: 100px;
+  --footer-height: 75px;
+  --content-height: calc(100vh - var(--menu-height) - var(--footer-height));
+
+  --host-layout-height: 55px;
+  --host-content-height: calc(var(--content-height) - var(--host-layout-height));
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (min-width: 768px) {
+  :root {
+    max-width: 1920px;
+  }
+
+
+}
