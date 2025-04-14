@@ -1,0 +1,69 @@
+.host-vancard-container {
+  height: 100%;
+  padding: 0 25px;
+}
+.host-vancard-header-container{
+  max-width: 700px;
+  height: 200px;
+  /* padding: 20px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.host-vancard-header-container img {
+  height: 100%;
+}
+.host-vancard-text{
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.host-vancard-text p {
+
+}
+
+
+.host-van-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 34px;
+  color: #FFEAD0;
+  border-radius: 5px;
+}
+
+.host-van-type.rugged {
+  background-color: #115E59;
+}
+.host-van-type.simple {
+  background-color: #E17654;
+}
+.host-van-type.luxury {
+  background-color: #161616;
+}
+
+.host-vancard-text h2 {
+
+}
+
+.host-vancard-text span {
+
+}
+.host-vancard-menu {
+
+}
+.host-vancard-button{
+  font-size: 16px;
+  color: #4D4D4D;
+  text-decoration: none;
+  padding: 5px 5px 5px 0;
+  margin: 0 0 5px;
+  text-transform: capitalize;
+}
+
+
+.host-vancard-button:hover {
+  text-decoration: underline;
+}

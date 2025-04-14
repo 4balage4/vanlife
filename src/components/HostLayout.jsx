@@ -12,9 +12,10 @@ function HostLayout() {
   return (
     <>
     <nav className='host-menu'>
-      <NavLink end style={({isActive})=> isActive ? activeStyles : null}className="host-menu-item" to="/host">dashboard</NavLink>
+      <NavLink end style={({isActive})=> isActive ? activeStyles : null}className="host-menu-item" to=".">dashboard</NavLink>
       <NavLink style={({isActive})=> isActive ? activeStyles : null}className="host-menu-item" to="income">income</NavLink>
       <NavLink style={({isActive})=> isActive ? activeStyles : null}className="host-menu-item" to="reviews">reviews</NavLink>
+      <NavLink style={({isActive})=> isActive ? activeStyles : null}className="host-menu-item" to="vans">vans</NavLink>
     </nav>
       <Outlet/>
     </>

@@ -11,6 +11,17 @@
 @import './VanDetail/VanDetail.css';
 
 
+/* Host */
 @import './Host/Dashboard.css';
 @import './Host/Income.css';
 @import './Host/Reviews.css';
+
+
+/* Host/Vans/ -> */
+@import './Host/Vans/Vans.css';
+@import './Host/Vans/VanDetails.css';
+
+/* Host/Vans/VanDetails */
+/* @import './Host/Vans/VanDetailsSub/VanPhotos.css';
+@import './Host/Vans/VanDetailsSub/VanPricing.css';
+@import './Host/Vans/VanDetailsSub/VanInfo.css'; */
