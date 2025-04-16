@@ -20,6 +20,8 @@
 /* Host/Vans/ -> */
 @import './Host/Vans/Vans.css';
 @import './Host/Vans/VanDetails.css';
+@import './Host/Vans/HostVanLayout.css';
+@import './Host/Vans/VanDetailsSub/SubIndex.css';
 
 /* Host/Vans/VanDetails */
 /* @import './Host/Vans/VanDetailsSub/VanPhotos.css';

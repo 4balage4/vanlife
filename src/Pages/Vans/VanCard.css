@@ -12,6 +12,12 @@
 
   box-shadow: 10px black;
 }
+
+.van-card:hover {
+  box-shadow: 0px 4px 10px #E17654;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
 .van-card img {
   width: 100%;
   aspect-ratio: 1/1;

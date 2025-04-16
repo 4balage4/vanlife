@@ -52,14 +52,14 @@
 
 }
 .host-vancard-menu {
-
+  margin: 20px 0;
 }
 .host-vancard-button{
   font-size: 16px;
   color: #4D4D4D;
   text-decoration: none;
   padding: 5px 5px 5px 0;
-  margin: 0 0 5px;
+  margin: 0 5px 5px;
   text-transform: capitalize;
 }
 
@@ -67,3 +67,24 @@
 .host-vancard-button:hover {
   text-decoration: underline;
 }
+
+
+@media (min-width: 768px) {
+  .host-vancard-container {
+   max-width: 700px;
+
+  }
+
+  .host-vans-container h2 {
+   text-align: center;
+  }
+  }
+
+
+  @media (min-width: 1024px) {
+    .host-vancard-container {
+      max-width: 900px;
+
+    }
+
+  }

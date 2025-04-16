@@ -5,7 +5,7 @@ function Pricing() {
   const {price} = useOutletContext()
   return (
     <div>
-      <p><strong>${price}</strong><span>/day</span></p>
+      <p className='pricing-sub'><strong>${price}</strong><span>/day</span></p>
     </div>
   )
 }
