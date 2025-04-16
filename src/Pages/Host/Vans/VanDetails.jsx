@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HostVanLayout from "../../../components/HostVanLayout";
+import HostVanLayout from "./HostVanLayout";
 import fetchHostVan from "../../../utils/fetchHostVan";
 import { useParams, Link } from "react-router";
 

@@ -2,4 +2,17 @@
 .host-van-details-container {
   min-height: var(--host-content-height);
 
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 auto;
+}
+
+
+.back-button {
+  margin: 20px 0;
+  text-decoration: none;
+  color: #4D4D4D;
+  font-size: 16px;
 }
