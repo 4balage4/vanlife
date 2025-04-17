@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import fetchVan from "../../utils/fetchVan";
 import Button from "../../components/Button";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 function VanDetail() {
   const param = useParams();
+  const location = useLocation()
   const [van, setVan] = useState("");
+  console.log(location)
 
   useEffect(() => {
     const loadVan = async () => {
@@ -16,9 +18,19 @@ function VanDetail() {
     loadVan();
   }, [param.id]);
 
+
+
+
+
+  const search = location.state?.search || ""
+  console.log(search)
+
   return (
     <div className="van-detail-container">
-      <Link to="/vans">🔙 to Vans</Link>
+      <Link to={`..?${search}`}
+      relative="path"
+      className='back-button'
+      >&larr; to Vans</Link>
 
       {van ? (
         <>

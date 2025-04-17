@@ -1,16 +1,12 @@
 import React from 'react'
 import Button from '../../components/Button'
-import {Link} from 'react-router'
 
-function VanCard({id, name, price, imageUrl, type}) {
-
-
+function VanCard({name, price, imageUrl, type}) {
 
 
   return (
-    <div className='van-card'>
-      <Link to={`/vans/${id}`} className='van-card-link'>
-        <img src={imageUrl} alt={`van-${name}`}/>
+   <>
+            <img src={imageUrl} alt={`van-${name}`}/>
         <div className="van-card-text-container">
 
         <div className="van-card-name-btn">
@@ -22,8 +18,9 @@ function VanCard({id, name, price, imageUrl, type}) {
           <span>/day</span>
         </p>
         </div>
-      </Link>
-      </div>
+
+   </>
+
   )
 }
 
