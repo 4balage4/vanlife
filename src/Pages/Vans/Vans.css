@@ -6,30 +6,57 @@
 }
 
 .vans-header {
-  margin: 0;
-  padding: 0;
 
+  padding: 0;
+  margin: 0 20px;
 }
 
 
 .button-container {
-  max-width: 500px;
+  max-width: 450px;
   display: flex;
   justify-content: space-between;
   align-items: start;
+  margin: 10px 20px;
 }
 
 .filter {
   padding: 8px 16px;
   margin: 5px;
   border-radius: 5px;
+  border: solid 1px #E17654;
   background-color: #FFEAD0;
   color: #4D4D4D;
 }
 
+.filter:hover {
+  background-color: #E17654;
+  color: #FFEAD0;
+  transition: all 0.3s ease-in-out;
+}
+.filter.active {
+  background-color: #E17654;
+  color: #FFEAD0;
+}
+
 .clear-filter {
-  background-color: #FFF7ED;
+  background-color: #FFEAD0;
+  border: none;
   text-decoration: underline;
+}
+
+.clear-filter:hover {
+  scale: 1.05;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter.clear-filter:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  scale: none;
+  transition: none;
+  background-color: #FFEAD0;
+  color: #4D4D4D;
 }
 
 .vans-list-container {

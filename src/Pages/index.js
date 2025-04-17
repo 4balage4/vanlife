@@ -18,6 +18,10 @@ import HostVanPhotos from './Host/Vans/VanDetailsSub/Photos';
 import HostVanInfo from './Host/Vans/VanDetailsSub/Info';
 
 
+// Not found
+import NotFound from './NotFound/NotFound'
+
+
 export {
   Home,
   About,
@@ -31,4 +35,5 @@ export {
   HostVanPricing,
   HostVanPhotos,
   HostVanInfo,
+  NotFound,
 };

@@ -22,7 +22,7 @@ function Vans() {
       {vans &&
         vans.map((van) => {
           return (
-            <Link to={`/host/vans/${van.id}`} className="host-van-link" key={van.id}>
+            <Link to={van.id} className="host-van-link" key={van.id}>
             <div className="host-van-container" key={van.id}>
               <img className="host-van-image" src={van.imageUrl} alt={van.name} />
               <div className="host-van-text-container">

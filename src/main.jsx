@@ -15,7 +15,9 @@ import {
   HostVanPricing,
   HostVanPhotos,
   HostVanInfo,
+  NotFound,
 } from "./Pages/index.js";
+
 import Layout from "./components/Layout";
 import HostLayout from "./components/HostLayout";
 
@@ -65,10 +67,10 @@ createRoot(document.getElementById("root")).render(
                    </Route>
               </Route>
 
+        <Route path="*" element={<NotFound/>} />
           </Route>
 
 
-        <Route path="*" element={<h1>404 error, page not found or does not exist</h1>} />
 
       </Routes>
       {/* <App /> */}
