@@ -29,11 +29,11 @@ function VanDetail() {
 
 
    if (loading) {
-    return <h1 className="van-detail-container">Loading ...</h1>
+    return <h1 aria-live="polite" className="van-detail-container">Loading ...</h1>
   }
 
   if (error) {
-    return <h1 className="van-detail-container">Error was here {error.message}</h1>
+    return <h1 aria-live="assertive" className="van-detail-container">Error was here {error.message}</h1>
   }
 
 

@@ -21,6 +21,8 @@ import HostVanInfo from './Host/Vans/VanDetailsSub/Info';
 // Not found
 import NotFound from './NotFound/NotFound'
 
+import Login from './Login/Login';
+
 
 export {
   Home,
@@ -36,4 +38,6 @@ export {
   HostVanPhotos,
   HostVanInfo,
   NotFound,
+  Login,
+  
 };

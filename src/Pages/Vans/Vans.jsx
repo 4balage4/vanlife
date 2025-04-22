@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 // import useEffectOnUpdates from '../../utils/hooks/useEffectOnUpdates'
 import fetchVans from "../../utils/fetchVans";
 import Button from "../../components/Button";
@@ -46,11 +45,11 @@ export default function Vans() {
     : vans;
 
      if (loading) {
-      return <h1 className="van-container">Loading ...</h1>
+      return <h1 aria-live="polite" className="van-container">Loading ...</h1>
     }
 
     if (error) {
-      return <h1 className="van-container">Error was here {error.message}</h1>
+      return <h1 aria-live="assertive" className="van-container">Error was here {error.message}</h1>
     }
 
 
