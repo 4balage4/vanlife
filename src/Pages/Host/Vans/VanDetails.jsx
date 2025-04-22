@@ -1,42 +1,53 @@
-import React, { useEffect, useState } from "react";
+
 import HostVanLayout from "./HostVanLayout";
 import fetchHostVan from "../../../utils/fetchHostVan";
 import { useParams, Link } from "react-router";
+import useFetch from "../../../utils/hooks/useFetch";
 
 function VanCard() {
-  const [currentVan, setCurrentVan] = useState(null);
 
   const param = useParams();
 
-  useEffect(() => {
-    const fetchVan = async () => {
-      const data = await fetchHostVan(param.id);
-      // console.log(data.vans[0])
-      setCurrentVan(data.vans);
-    };
-    fetchVan();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const {data, loading, error} = useFetch(fetchHostVan, param.id)
+  const currentVan = data?.vans[0] || [];
+  // useEffect(() => {
+  //   const fetchVan = async () => {
+  //     const data = await fetchHostVan(param.id);
+  //     // console.log(data.vans[0])
+  //     setCurrentVan(data.vans);
+  //   };
+  //   fetchVan();
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-  console.log(currentVan);
+  // console.log(currentVan);
+
+
+   if (loading) {
+    return <h1 className="host-van-details-container">Loading ...</h1>
+  }
+
+  if (error) {
+    return <h1 className="host-van-details-container">Error was here {error.message}</h1>
+  }
+
+
 
   return (
     <div className="host-van-details-container">
       <Link to=".." relative='path' className="back-button">
         &larr; <span>Back to all vans</span>
       </Link>
-      {currentVan ? (
+      {currentVan &&
         <HostVanLayout
-          imageUrl={currentVan[0].imageUrl}
-          name={currentVan[0].name}
-          price={currentVan[0].price}
-          type={currentVan[0].type}
-          description={currentVan[0].description}
-          id={currentVan[0].id}
+          imageUrl={currentVan.imageUrl}
+          name={currentVan.name}
+          price={currentVan.price}
+          type={currentVan.type}
+          description={currentVan.description}
+          id={currentVan.id}
         />
-      ) : (
-        <h2>Loading...</h2>
-      )}
+      }
     </div>
   );
 }

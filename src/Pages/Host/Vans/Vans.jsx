@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from "react";
+
 import fetchVans from "../../../utils/fetchHostVans";
 import {Link} from "react-router";
+import useFetch from '../../../utils/hooks/useFetch'
 
 function Vans() {
-  const [vans, setVans] = useState(null);
-
-  useEffect(() => {
-    const loadVans = async () => {
-      const data = await fetchVans();
-      setVans(data.vans);
-    };
-    loadVans();
-  }, []);
+  // I refactored the code to make the fetch with a custom hook.
+  // const [vans, setVans] = useState(null);
+  const {data, loading, error} = useFetch(fetchVans);
+  const vans = data?.vans || [];
+  // useEffect(() => {
+  //   const loadVans = async () => {
+  //     const data = await fetchVans();
+  //     setVans(data.vans);
+  //   };
+  //   loadVans();
+  // }, []);
 // the server already sorts the request by the user id.
 
+ if (loading) {
+  return <h1 className="host-van-container">Loading ...</h1>
+}
+
+if (error) {
+  return <h1 className="host-van-container">Error was here {error.message}</h1>
+}
 
 
   return (
