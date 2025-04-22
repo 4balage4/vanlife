@@ -18,11 +18,11 @@ function Vans() {
 // the server already sorts the request by the user id.
 
  if (loading) {
-  return <h1 className="host-van-container">Loading ...</h1>
+  return <h1 aria-live="polite" className="host-van-container">Loading ...</h1>
 }
 
 if (error) {
-  return <h1 className="host-van-container">Error was here {error.message}</h1>
+  return <h1 aria-live="assertive" className="host-van-container">Error was here {error.message}</h1>
 }
 
 

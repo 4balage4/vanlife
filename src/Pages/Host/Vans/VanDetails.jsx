@@ -24,11 +24,11 @@ function VanCard() {
 
 
    if (loading) {
-    return <h1 className="host-van-details-container">Loading ...</h1>
+    return <h1 aria-live="polite" className="host-van-details-container">Loading ...</h1>
   }
 
   if (error) {
-    return <h1 className="host-van-details-container">Error was here {error.message}</h1>
+    return <h1 aria-live="assertive" className="host-van-details-container">Error was here {error.message}</h1>
   }
 
 
