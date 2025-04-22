@@ -2,6 +2,7 @@
 const fetchVans = async () =>  {
   try {
     const response = await fetch('api/vans')
+    console.log('Raw response:', response);
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
