@@ -1,10 +1,11 @@
 .host-menu {
-  background-color: #f3a03a;
+  background-color: #FFF7ED;
   display: flex;
   justify-content: space-around;
   max-width: 500px;
   border-radius: 10px;
   height: var(--host-menu-height);
+  padding-bottom: 25px;
 }
 
 .host-menu-item {

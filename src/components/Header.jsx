@@ -21,9 +21,8 @@ function Header() {
           <NavLink className={(props) =>`link-button ${active(props)}`} to='host'>Host</NavLink>
           <NavLink className={(props) =>`link-button ${active(props)}`} to='about'>About</NavLink>
           <NavLink className={(props) =>`link-button ${active(props)}`} to='vans'>Vans</NavLink>
-          <NavLink className='link-button' to="login">{<CgProfile />}
-          <NavLink className='link-button' onClick={logOut}><FiLogOut/></NavLink>
-          </NavLink>
+          {/* <NavLink className='link-button' to="login">{<CgProfile />}</NavLink> */}
+          {/* <NavLink className='link-button' onClick={logOut}><FiLogOut/></NavLink> */}
         </nav>
     </div>
   )
