@@ -7,7 +7,7 @@ function Vans() {
   // I refactored the code to make the fetch with a custom hook.
   // const [vans, setVans] = useState(null);
   const {data, loading, error} = useFetch(fetchVans);
-  const vans = data?.vans || [];
+  const vans = data || [];
   // useEffect(() => {
   //   const loadVans = async () => {
   //     const data = await fetchVans();
@@ -18,11 +18,21 @@ function Vans() {
 // the server already sorts the request by the user id.
 
  if (loading) {
-  return <h1 aria-live="polite" className="host-van-container">Loading ...</h1>
+  return (
+    <div className="host-vans-container">
+      <h1 aria-live="polite" >Loading ...</h1>
+
+    </div>
+  )
 }
 
 if (error) {
-  return <h1 aria-live="assertive" className="host-van-container">Error was here {error.message}</h1>
+  return (
+    <div  className="host-vans-container">
+      <h1 aria-live="assertive">Error was here {error.message}</h1>
+
+    </div>
+  )
 }
 
 

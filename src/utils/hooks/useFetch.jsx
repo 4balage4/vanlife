@@ -15,7 +15,6 @@ const useFetch = (fetchFunc, param ) => {
       setLoading(true)
       try {
         const response = await fetchFunc(param)
-        console.log(response.vans)
         if (response) {
           setData(response)
         }
@@ -28,7 +27,7 @@ const useFetch = (fetchFunc, param ) => {
     }
   load()
 
-  
+
   if (param) {
     load()
   }

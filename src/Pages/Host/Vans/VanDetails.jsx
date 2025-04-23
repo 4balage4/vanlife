@@ -9,7 +9,7 @@ function VanCard() {
   const param = useParams();
 
   const {data, loading, error} = useFetch(fetchHostVan, param.id)
-  const currentVan = data?.vans[0] || [];
+  const currentVan = data || [];
   // useEffect(() => {
   //   const fetchVan = async () => {
   //     const data = await fetchHostVan(param.id);
