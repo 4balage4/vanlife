@@ -1,17 +1,17 @@
 import React from 'react'
-import imgUrl from '../../assets/images/Screenshot 2025-04-23 113241.png'
+import imgUrl from "src/assets/images/Screenshot2025-04-23113241.png"
 
 function Income() {
   return (
     <div className="income-container">
       <div className="income-header">
-        <h1>Income</h1>
+        <h2>Income</h2>
         <p>Last <span className='income-span'>30 days</span></p>
         <h3>$2,260</h3>
       </div>
       <div className='income-graph'>
         {/* i add an image... */}
-        <img src={imgUrl} alt="graph" />
+        <img src={`${imgUrl}`} alt="graph" />
       </div>
       <div className="income-transactions-container">
         <div className="income-trans-header">
