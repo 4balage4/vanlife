@@ -11,7 +11,7 @@ function VanDetail() {
   // const [van, setVan] = useState("");
 
   const {data, loading, error} = useFetch(fetchVan, param.id)
-  const van = data?.vans || [];
+  const van = data || [];
   // useEffect(() => {
   //   const loadVan = async () => {
   //     const data = await fetchVan(param.id);
@@ -25,7 +25,6 @@ function VanDetail() {
 
 
   const search = location.state?.search || ""
-  console.log(search)
 
 
    if (loading) {

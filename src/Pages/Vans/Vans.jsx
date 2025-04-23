@@ -16,7 +16,7 @@ export default function Vans() {
   // I run this function to get rename the data to vans also the fetch returns .vans: { van: 1 etc}
   // vans should be always an array, and i am using optional chaining.
   // if data true, go .vans,
-  const vans = data?.vans || [];
+  const vans = data || [];
   // useEffect(() => {
   //   const loadVans = async () => {
   //     setLoading(true);
@@ -44,14 +44,23 @@ export default function Vans() {
     ? vans.filter((van) => van.type.toLowerCase() == type)
     : vans;
 
-     if (loading) {
-      return <h1 aria-live="polite" className="van-container">Loading ...</h1>
+    if (loading) {
+      return (
+        <div className="vans-container">
+          <h1 aria-live="polite" >Loading ...</h1>
+
+        </div>
+      )
     }
 
     if (error) {
-      return <h1 aria-live="assertive" className="van-container">Error was here {error.message}</h1>
-    }
+      return (
+        <div  className="vans-container">
+          <h1 aria-live="assertive">Error was here {error.message}</h1>
 
+        </div>
+      )
+    }
 
     return (
       <div className="vans-container">
