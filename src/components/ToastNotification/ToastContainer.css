@@ -1,0 +1,9 @@
+
+
+.toast-container {
+  position: fixed;
+  width: 250px;
+  min-height: 75px;
+  bottom: 5%;
+  right: 2.5%;
+}

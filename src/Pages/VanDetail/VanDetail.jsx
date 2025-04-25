@@ -4,21 +4,24 @@ import fetchVan from "../../utils/fetchVan";
 import Button from "../../components/Button";
 import { Link, useLocation } from "react-router";
 import useFetch from '../../utils/hooks/useFetch'
+import {useToast} from '../../components/ToastNotification/ToastContext'
+
 
 function VanDetail() {
   const param = useParams();
   const location = useLocation()
+  const {addToast} = useToast()
   // const [van, setVan] = useState("");
 
   const {data, loading, error} = useFetch(fetchVan, param.id)
   const van = data || [];
   // useEffect(() => {
-  //   const loadVan = async () => {
-  //     const data = await fetchVan(param.id);
-  //     return setVan(data.vans);
-  //   };
-  //   loadVan();
-  // }, [param.id]);
+    //   const loadVan = async () => {
+      //     const data = await fetchVan(param.id);
+      //     return setVan(data.vans);
+      //   };
+      //   loadVan();
+      // }, [param.id]);
 
 
 
@@ -53,7 +56,7 @@ function VanDetail() {
             <span>/day</span>
           </p>
           <p className="van-description">{van.description}</p>
-          <Button className="van-btn">Rent this van</Button>
+          <Button className="van-btn" onClick={() => addToast('In progress building this function', 'neutral')}>Rent this van</Button>
         </>
       }
     </div>

@@ -2,5 +2,7 @@
 @import "./Footer.css";
 @import "./Button.css";
 @import './HostLayout.css';
+@import './Loading.css';
+@import './ToastNotification/ToastContainer.css';
 
-
+@import './ToastNotification/Toast.css';

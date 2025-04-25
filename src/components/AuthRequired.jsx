@@ -2,7 +2,10 @@ import React from 'react'
 import {Outlet, Navigate, useLocation} from 'react-router'
 
 function AuthRequired() {
-  const isLoggedIn = localStorage.getItem('loggedIn')
+  const isLoggedIn = true
+  // if you want the log in to work just replace the "true" with the line above
+  // localStorage.getItem('loggedIn')
+  // user: b@b.com, pw: p123
   const location = useLocation()
 
   if (!isLoggedIn) {

@@ -1,6 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import App from './App'
+import ToastContext from './components/ToastNotification/ToastContext'
+import ToastProvider from './components/ToastNotification/ToastContext'
 // import App from "./App.jsx";
 import {
   Home,
@@ -34,7 +37,12 @@ import { BrowserRouter, Routes, Route } from "react-router";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+      <ToastProvider>
+
+        <ToastContext/>
       <Routes>
+
+         <Route path='/test' element={<App/>}/>
         {/* Route path="/" is the route with the top menu and the footer The layout looks like a link menu on top and a footer. Between them there is the <Outlet/>*/}
           <Route path="/" element={<Layout />}>
             {/* Route path="" index.  this is the main index page, the url looks like = www.myPage.com */}
@@ -79,9 +87,10 @@ createRoot(document.getElementById("root")).render(
         <Route path="*" element={<NotFound/>} />
           </Route>
 
-
       </Routes>
-      {/* <App /> */}
+            </ToastProvider>
+
+
     </BrowserRouter>
   </StrictMode>
 );

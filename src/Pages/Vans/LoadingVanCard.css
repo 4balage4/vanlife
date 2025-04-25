@@ -1,0 +1,25 @@
+
+
+.content-loading {
+  background-image: linear-gradient(to right, #f8ce9c 0, #fbddb8 10%, #f5d4ad 20%, #ffcc8d 100%);
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+.loading-img {
+  min-height: 230px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+
+
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0
+  }
+}

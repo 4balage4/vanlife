@@ -6,6 +6,7 @@
 /* Vans  */
 @import "./Vans/Vans.css";
 @import "./Vans/VanCard.css";
+@import './Vans//LoadingVanCard.css';
 
 /* VanDetail */
 @import './VanDetail/VanDetail.css';
