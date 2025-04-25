@@ -13,9 +13,8 @@ const fetchVans = async () => {
     // the docs returned with and ID and te rest of the data
     // so here I map over it and I join the data to one object
     const vans = vansSnapshot.docs.map(doc => ({id: doc.id, ...doc.data()}))
-    console.log(vans)
     return vans
-    
+
   } catch (err) {
     console.log('Firestore error: ', err);
     throw err;

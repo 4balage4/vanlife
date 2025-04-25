@@ -1,0 +1,26 @@
+
+.toast {
+
+    height: 75px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: solid 0.5px;
+}
+
+.toast.alert {
+  color: red;
+  background-color: rgba(249, 191, 191, 0.80);
+}
+
+.toast.neutral {
+  color: orange;
+  background-color: rgba(253, 247, 210, 0.80);
+}
+
+.toast.success {
+  color: green;
+  background-color: rgba(169, 245, 178, 0.80);
+}

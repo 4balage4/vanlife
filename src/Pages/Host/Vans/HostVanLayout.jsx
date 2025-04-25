@@ -1,7 +1,8 @@
-import React from 'react'
+
 import {NavLink, Outlet} from 'react-router'
 
 function HostVanLayout({ name, price, imageUrl, type, description, id }) {
+
 
 
   const activeStyles = {

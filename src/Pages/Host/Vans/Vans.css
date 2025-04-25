@@ -1,6 +1,7 @@
 .host-vans-container {
   background-color: #FFF7ED;
   min-height: var(--host-content-height);
+
 }
 
 .host-van-link {
@@ -16,6 +17,10 @@
   background-color: #fff;
   border-radius: 5px;
 
+}
+
+.host-van-image {
+  width: 125px;
 }
 
 .host-van-container:hover {
@@ -37,6 +42,17 @@
 .host-van-text-container p span {
   font-weight: bold;
   font-size: 18px;
+}
+
+
+.list-new-van {
+  display: block;
+  margin: 15px auto;
+
+  width: 200px;
+  height: 50px;
+  color: #f8f3ec;
+  background-color: #E17654;
 }
 
 

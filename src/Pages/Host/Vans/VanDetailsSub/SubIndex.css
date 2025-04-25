@@ -6,3 +6,23 @@
 .pricing-sub {
   font-size: 24px;
 }
+
+.sub-photos-container {
+  display:inline-flex
+}
+
+.add-more-photos {
+  margin-left: 5px;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffead092;
+  cursor: pointer;
+}
+
+.add-more-photos:hover {
+  background-color: #ffead0e7;
+
+}

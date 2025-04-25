@@ -1,12 +1,13 @@
 
 import './App.css'
+import Loading from './components/Loading'
 
 function App() {
 
 
   return (
     <>
-      <h1>Hello App</h1>
+      <Loading/>
     </>
   )
 }

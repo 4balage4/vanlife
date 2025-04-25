@@ -1,7 +1,8 @@
 .host-vancard-container {
   height: 100%;
   padding: 0 25px;
-  
+
+
 }
 .host-vancard-header-container{
   max-width: 700px;
@@ -13,6 +14,7 @@
 }
 .host-vancard-header-container img {
   height: 100%;
+
 }
 .host-vancard-text{
   margin: 0 20px;
@@ -54,6 +56,13 @@
 }
 .host-vancard-menu {
   margin: 20px 0;
+  padding: 0 5px;
+  border-radius: 10px;
+  background-color: #FFEAD0;
+  max-width: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .host-vancard-button{
   font-size: 16px;

@@ -11,9 +11,9 @@
 
 .about-container img {
   width: 100%;
-  object-fit: cover;
-
-  max-height: 250px;
+  object-fit: contain;
+  min-height: 250px;
+  object-position: 50% 65%;
 }
 
 
@@ -69,7 +69,7 @@
   .about-container img {
     width: 100%;
     object-fit: cover;
-    max-height: 250px;
+    max-height: 350px;
   }
 
 

@@ -3,6 +3,7 @@ import HostVanLayout from "./HostVanLayout";
 import fetchHostVan from "../../../utils/fetchHostVan";
 import { useParams, Link } from "react-router";
 import useFetch from "../../../utils/hooks/useFetch";
+import Loading from '../../../components/Loading'
 
 function VanCard() {
 
@@ -24,11 +25,17 @@ function VanCard() {
 
 
    if (loading) {
-    return <h1 aria-live="polite" className="host-van-details-container">Loading ...</h1>
+    return <div className="host-van-details-container loading-animation">
+      <Loading/>
+    </div>
   }
 
   if (error) {
-    return <h1 aria-live="assertive" className="host-van-details-container">Error was here {error.message}</h1>
+
+    return <div className="host-van-details-container">
+
+     <h1 aria-live="assertive" >Error was here {error.message}</h1>
+    </div>
   }
 
 

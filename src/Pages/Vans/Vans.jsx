@@ -2,39 +2,17 @@
 import fetchVans from "../../utils/fetchVans";
 import Button from "../../components/Button";
 import VanCard from "./VanCard";
+import LoadingVanCard from './LoadingVanCard'
 import { useSearchParams, Link } from "react-router";
 import useFetch from '../../utils/hooks/useFetch'
 
 
 
+
 export default function Vans() {
   const  {data, loading, error} = useFetch(fetchVans);
-  // const [vans, setVans] = useState([]);
-  // const [loading, setLoading] = useState(true)
-  // const [error, setError] = useState(null)
-
-  // I run this function to get rename the data to vans also the fetch returns .vans: { van: 1 etc}
-  // vans should be always an array, and i am using optional chaining.
-  // if data true, go .vans,
   const vans = data || [];
-  // useEffect(() => {
-  //   const loadVans = async () => {
-  //     setLoading(true);
-  //     try {
-  //       const data = await fetchVans();
-  //       if (data) {
-  //         setVans(data.vans);
-  //       }
-  //       console.log(vans)
-  //     } catch (err) {
-  //       console.log('There was an error!', err)
-  //       setError(err)
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   loadVans();
-  // }, []);
+
 
   const [searchParams, setSearchParams] = useSearchParams();
   const type = searchParams.get("type");
@@ -44,14 +22,22 @@ export default function Vans() {
     ? vans.filter((van) => van.type.toLowerCase() == type)
     : vans;
 
-    if (loading) {
-      return (
-        <div className="vans-container">
-          <h1 aria-live="polite" >Loading ...</h1>
 
-        </div>
-      )
-    }
+    // testing purpose for the content placeholder
+  // const fakeLoad = false
+
+
+    // loading screen is replaced by content placeholders...
+    // if (loading) {
+    //   return (
+    //     <div className="vans-container">
+    //       <h1 aria-live="polite" >Loading ...</h1>
+
+    //     </div>
+    //   )
+    // }
+
+
 
     if (error) {
       return (
@@ -95,17 +81,20 @@ export default function Vans() {
         </div>
       </div>
       <div className="vans-list-container">
+      {loading ?
+         <LoadingVanCard />
+          :
+        (vans &&
 
-
-        {vans &&
           filteredVans.map((van) => {
             return (
-               <div className='van-card' key={van.id}>
+              <div className='van-card' key={van.id}>
               <Link to={van.id}
               // this state is passed to the vandetail component, and I use this as a route back to the same search parameters.
               // the searchParams string is built with the ?{param}
-                state={{search: `?${searchParams.toString()}`}}
-                className='van-card-link'>
+              state={{search: `?${searchParams.toString()}`}}
+              className='van-card-link'>
+
               <VanCard
                 key={van.id}
                 id={van.id}
@@ -114,10 +103,12 @@ export default function Vans() {
                 imageUrl={van.imageUrl}
                 type={van.type}
                 />
+
                 </Link>
                 </div>
             );
-          })}
+          }))
+        }
       </div>
     </div>
   );

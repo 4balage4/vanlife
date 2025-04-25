@@ -22,6 +22,10 @@
   width: 100%;
 }
 
+.income-transactions-container{
+  margin-bottom: 50px;
+}
+
 .income-header h3 {
   font-size: 36px;
 }

@@ -1,7 +1,10 @@
-
+import {useEffect} from 'react'
 import fetchVans from "../../../utils/fetchHostVans";
+
 import {Link} from "react-router";
 import useFetch from '../../../utils/hooks/useFetch'
+import Loading from '../../../components/Loading'
+import Button from '../../../components/Button'
 
 function Vans() {
   // I refactored the code to make the fetch with a custom hook.
@@ -9,22 +12,23 @@ function Vans() {
   const {data, loading, error} = useFetch(fetchVans);
   const vans = data || [];
   // useEffect(() => {
-  //   const loadVans = async () => {
-  //     const data = await fetchVans();
-  //     setVans(data.vans);
-  //   };
-  //   loadVans();
-  // }, []);
-// the server already sorts the request by the user id.
+    //   const loadVans = async () => {
+      //     const data = await fetchVans();
+      //     setVans(data.vans);
+      //   };
+      //   loadVans();
+      // }, []);
+      // the server already sorts the request by the user id.
+
+
 
  if (loading) {
-  return (
-    <div className="host-vans-container">
-      <h1 aria-live="polite" >Loading ...</h1>
 
-    </div>
-  )
+    return <div className="host-van-details-container loading-animation">
+    <Loading/>
+  </div>
 }
+
 
 if (error) {
   return (
@@ -53,6 +57,8 @@ if (error) {
             </Link>
           );
         })}
+        <Button className='list-new-van' onClick={() => {addToast('Adding new van is not possible', 'alert')}}>List New Van</Button>
+
     </div>
   );
 }
