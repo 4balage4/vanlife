@@ -6,19 +6,16 @@ import useFetch from '../../../utils/hooks/useFetch'
 import Loading from '../../../components/Loading'
 import Button from '../../../components/Button'
 
+import {useToast} from '../../../components/ToastNotification/ToastContext'
+
 function Vans() {
   // I refactored the code to make the fetch with a custom hook.
   // const [vans, setVans] = useState(null);
   const {data, loading, error} = useFetch(fetchVans);
   const vans = data || [];
-  // useEffect(() => {
-    //   const loadVans = async () => {
-      //     const data = await fetchVans();
-      //     setVans(data.vans);
-      //   };
-      //   loadVans();
-      // }, []);
-      // the server already sorts the request by the user id.
+
+  const {addToast} = useToast()
+
 
 
 

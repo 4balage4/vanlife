@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router';
-import { CgProfile } from "react-icons/cg";
-import { FiLogOut } from "react-icons/fi";
+// import { CgProfile } from "react-icons/cg";
+// import { FiLogOut } from "react-icons/fi";
 
 
 
@@ -10,9 +10,9 @@ function Header() {
     return isActive ? 'active-link' : ''
   }
 
-  function logOut() {
-    localStorage.removeItem('loggedIn')
-  }
+  // function logOut() {
+  //   localStorage.removeItem('loggedIn')
+  // }
 
   return (
     <div className='menu-component'>
