@@ -36,6 +36,8 @@
   flex-direction: column;
 }
 
+
+
 .line-container {
   display: flex;
   padding: 0 20px;
@@ -50,10 +52,14 @@
 
 }
 
+.review-score p {
+  width: 40px;
+}
+
 .review-line {
   width: 100%;
   background-color: #B9B9B9;
-  height: 5px;
+  height: 10px;
 }
 
 .review-line.full {
@@ -87,4 +93,18 @@
 .review-comment-line {
   background-color: #B9B9B9;
   height: 0.5px;
+}
+
+
+
+@media (max-width: 520px) {
+  .review-rating-graph-container {
+    width: 350px;
+  }
+
+.line-container {
+  min-width: 150px;
+  padding: 0 10px;
+}
+
 }

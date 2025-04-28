@@ -81,6 +81,7 @@ function Reviews() {
     return ((ratingCount[num] / arr.length) * 100).toFixed(1);
   }
 
+
   const loadingDiv = (
     <div className="user-reviews-container loading-animation">
       <Loading />
@@ -101,7 +102,7 @@ function Reviews() {
       </div>
       <div className="review-rating-graph-container">
         <div className="review-score">
-          <p>5 stars</p>
+          <p>5⭐</p>
           <div className="line-container">
             <div
               className="review-line full"
@@ -115,7 +116,7 @@ function Reviews() {
           <p>{countRating(5)}%</p>
         </div>
         <div className="review-score">
-          <p>4 stars</p>
+          <p>4⭐</p>
           <div className="line-container">
             <div
               className="review-line full"
@@ -129,7 +130,7 @@ function Reviews() {
           <p>{countRating(4)}%</p>
         </div>
         <div className="review-score">
-          <p>3 stars</p>
+          <p>3⭐</p>
           <div className="line-container">
             <div
               className="review-line full"
@@ -143,8 +144,8 @@ function Reviews() {
           <p>{countRating(3)}%</p>
         </div>
         <div className="review-score">
-          <p>2 stars</p>
-          <div className="line-container">
+          <p>2⭐</p>
+          <div className="line-container" >
             <div
               className="review-line full"
               style={{ width: `${countRating(2)}%` }}
@@ -157,8 +158,8 @@ function Reviews() {
           <p>{countRating(2)}%</p>
         </div>
         <div className="review-score">
-          <p>1 stars</p>
-          <div className="line-container">
+          <p>1⭐</p>
+          <div className="line-container" >
             <div
               className="review-line full"
               style={{ width: `${countRating(1)}%` }}
